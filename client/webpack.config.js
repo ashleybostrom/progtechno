@@ -14,7 +14,6 @@ module.exports = () => {
       main: './src/js/index.js',
       install: './src/js/install.js'
     },
-    devTool: 'inline-source-map',
     devServer: {
       port: process.env.PORT || 3000,
       static: path.resolve(__dirname, 'dist'),
@@ -28,6 +27,10 @@ module.exports = () => {
         title: 'Progressive Web Application',
         template: './src/index.html',
         filename: './index.html'
+      }),
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'sw.js',
       }),
       new WebpackPwaManifest({
         inject: true,
@@ -47,12 +50,7 @@ module.exports = () => {
           },
         ],
       }),
-      new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'sw.js',
-      }),
     ],
-
     module: {
       rules: [
         {
