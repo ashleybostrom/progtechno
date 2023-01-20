@@ -33,7 +33,6 @@ const store = tx.objectStore('jate');
 const request = store.getAll();
 const result = await request;
 console.log('getDb implemented', result);
-return result;
 };
 
 initdb();
