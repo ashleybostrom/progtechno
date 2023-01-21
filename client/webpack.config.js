@@ -20,8 +20,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         title: 'Progressive Web Application',
-        template: './src/index.html',
-        filename: './index.html'
+        template: './index.html',
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
