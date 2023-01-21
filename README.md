@@ -1,4 +1,4 @@
-# progtechno
+# Progressive Technology
 
 This is a Progressive Web Application (PWA) that is a single-page application text editor that will run in the browser. It includes data persistance techniques to serve as redundacy in the case that a browser does not support any of the options and it has offline functionality, so any notes or code can still be retrieved later.
 
