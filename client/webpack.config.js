@@ -25,6 +25,7 @@ module.exports = () => {
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'sw.js',
+        exclude: [/\.(?:png|jpg|jpeg|svg)$/],
       }),
       new WebpackPwaManifest({
         inject: true,
